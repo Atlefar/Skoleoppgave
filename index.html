@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppgave 6</title>
+  </head>
+  <body>
+    <input
+      id="sizeSlider"
+      type="range"
+      min="100"
+      max="500"
+      step="10"
+      oninput="showDiv()"
+    />
+    <br />
+    <input
+      id="radiusSlider"
+      type="range"
+      min="0"
+      max="50"
+      step="1"
+      value="0"
+      oninput="showDiv()"
+    />
+
+    <input
+      id="textInput"
+      type="text"
+      oninput="showDiv()"
+      value="endre teksten!"
+    />
+
+    <select id="colorChooser" onchange="showDiv()">
+      <option value="red">Red color</option>
+      <option selected value="green">Green color</option>
+      <option value="blue">Blue color</option>
+    </select>
+
+    <select id="borderChooser" onchange="showDiv()">
+      <option value="none">No border</option>
+      <option selected value="black">Black border</option>
+      <option value="grey">Grey border</option>
+    </select>
+
+    <div id="resultat"></div>
+    <div id="resultatHtml" style="font-family: monospace"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
